@@ -17,7 +17,7 @@ public class SoftAssertions {
     }
 
     @Test
-    void goToPage() {
+    void goToPageTest() {
         String pageName = "SoftAssertions";
         ElementsCollection wikiPagesLinks = $$("#wiki-pages-box ul > li summary a");
 

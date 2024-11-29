@@ -28,7 +28,7 @@ public class SoftAssertions {
         wikiPagesLinks.shouldHave(itemWithText(pageName));
         wikiPagesLinks.findBy(text(pageName)).click();
 
-        $$("#wiki-body .highlight").shouldHave(itemWithText("@ExtendWith({SoftAssertsExtension.class})\n" +
+        $("#wiki-body").shouldHave(text("@ExtendWith({SoftAssertsExtension.class})\n" +
                 "class Tests {\n" +
                 "  @Test\n" +
                 "  void test() {\n" +

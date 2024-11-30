@@ -16,4 +16,4 @@ out/
 ### Logs ###
 *.log
 
-/src/test/java/qaguru/
+/src/test/java/guru/

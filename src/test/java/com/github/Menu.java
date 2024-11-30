@@ -4,6 +4,7 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -16,8 +17,8 @@ public class Menu {
     @Test
     void selectMenuItemOnHoverTest() {
         open("/");
-        $$(".HeaderMenu-link").findBy(text("Solutions")).hover();
-        $$(".HeaderMenu-dropdown-link").findBy(text("Enterprises")).click();
+        $$(".HeaderMenu-link").findBy(exactText("Solutions")).hover().closest(".HeaderMenu-item")
+                .$$(".HeaderMenu-dropdown-link").findBy(exactText("Enterprises")).click();
         $("#hero-section-brand-heading").shouldHave(text("The AI-powered developer platform"));
     }
 }

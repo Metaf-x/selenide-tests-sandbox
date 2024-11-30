@@ -14,10 +14,10 @@ public class Menu {
         Configuration.baseUrl = "https://github.com";
     }
     @Test
-    void selectMenuItemOnHover() {
+    void selectMenuItemOnHoverTest() {
         open("/");
-        $$(".HeaderMenu-nav > ul > li").findBy(text("Solutions")).hover()
-                .$$(".HeaderMenu-dropdown ul > li").findBy(text("Enterprises")).click();
+        $$(".HeaderMenu-link").findBy(text("Solutions")).hover();
+        $$(".HeaderMenu-dropdown-link").findBy(text("Enterprises")).click();
         $("#hero-section-brand-heading").shouldHave(text("The AI-powered developer platform"));
     }
 }

@@ -17,3 +17,4 @@ out/
 *.log
 
 /src/test/java/guru/
+/src/test/java/myPlayground/

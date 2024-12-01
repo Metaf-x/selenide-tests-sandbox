@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class StudentRegistrationForm {
+public class StudentRegistrationFormTest {
 
     @BeforeAll
     static void setup() {
@@ -19,7 +19,7 @@ public class StudentRegistrationForm {
     }
 
     @Test
-    void fillAllFields() {
+    void fillAllFieldsTest() {
         open("/automation-practice-form");
 
         //remove ad banners

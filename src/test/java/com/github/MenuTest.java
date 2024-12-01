@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class Menu {
+public class MenuTest {
     @BeforeAll
     static void setup() {
         Configuration.browserSize = "1920x1080";
